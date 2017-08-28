@@ -3,7 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
+use App\User;
+
+use Illuminate\Support\Facades;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
+use Illuminate\Http\RedirectResponse;
+
 
 class ProductsController extends Controller
 {
@@ -25,6 +32,11 @@ class ProductsController extends Controller
     public function create()
     {
         //
+        $categories = category::pluck('cname', 'cid');
+       
+
+        return view('layouts.product.create',compact('categories'));
+
     }
 
     /**
@@ -36,6 +48,10 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         //
+        $formInput=$request->all();
+        product::create($formInput);
+
+        return redirect()->route('addProduct');
     }
 
     /**

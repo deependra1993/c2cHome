@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('details');
             $table->string('image');
             $table->integer('cid');
-            $table->integer('uid');
+            $table->integer('id');
             $table->timestamps();
         });
     }

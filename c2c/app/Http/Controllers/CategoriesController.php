@@ -25,6 +25,7 @@ class CategoriesController extends Controller
     public function create()
     {
         //
+        return view('layouts.category.create');
     }
 
     /**
@@ -36,6 +37,9 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         //
+        $category = new category;
+        $category->cname=$request->cname;
+        $category->save();
     }
 
     /**

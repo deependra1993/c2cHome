@@ -8,7 +8,7 @@
                 <div class="panel-heading">
                 Dashboard
 
-                <a href="{{route('add')}}" class="badge-pill right">
+                <a href="{{route('addProduct')}}" class="badge-pill right">
                     adPost!!
                 </a>
                 
