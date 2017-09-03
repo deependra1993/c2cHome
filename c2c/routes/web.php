@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$prD=DB::table('products')->get();
+   return view('welcome',compact('prD'));
 });
 
 Auth::routes();
@@ -22,4 +23,3 @@ Route::get('add','HomeController@add')->name('add');
 Route::get('create','ProductsController@create')->name('addProduct');
 Route::resource('/product','ProductsController');
 Route::resource('/category','CategoriesController');
-
