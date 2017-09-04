@@ -9,6 +9,8 @@ use App\User;
 use Illuminate\Support\Facades;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Validator;
+
 use Illuminate\Http\RedirectResponse;
 
 
@@ -47,6 +49,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
+        
         //
         $formInput=$request->all();
         product::create($formInput);
