@@ -3,7 +3,7 @@
 	<div class="flip-container">
 		<div class="flip">
 			<figure class="front">
-				<img src="pic/dog.jpg" alt="img">
+				<img src="image/dog.jpg" alt="img">
 			</figure>
 		    <figure class="back">
 			    
@@ -13,7 +13,7 @@
 							<h4>{{$prDs->price}}</h4>
 							<h4>{{$prDs->details}}</h4>
 							<h4>{{$prDs->created_at}}</h4>
-						@endforeach
+					@endforeach
 				 
 		    </figure>
 	    </div>		

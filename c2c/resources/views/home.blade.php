@@ -24,6 +24,11 @@
 
                     You are logged in!
                 </div>
+                <div>
+                    <p><a href="{{ url('/product') }}">productlist</a></p>
+
+                    
+                </div>
             </div>
         </div>
     </div>
