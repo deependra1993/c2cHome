@@ -4,7 +4,7 @@
 		<div class="flip">
 			
 			<figure class="front">
-				<img src="pic/dog.jpg" alt="img">
+				<img src="image/dog.jpg" alt="img">
 			</figure>
 		    <figure class="back">
 		    	@for($j=$i;$j<=$i;$j++)
@@ -14,6 +14,7 @@
 
 				@endfor
 			    
+
 		    </figure>
 	    </div>		
 	</div>

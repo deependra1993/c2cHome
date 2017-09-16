@@ -17,7 +17,7 @@
 			</div>
 			<div>
 				{!! Form::label('image', 'Image', []) !!}
-				{!! Form::text('image', null, []) !!}
+				{!! Form::file('image', []) !!}
 			</div>
 			<div>
 				{!! Form::label('cid', 'Category', []) !!}

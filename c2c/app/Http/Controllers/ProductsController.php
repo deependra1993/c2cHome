@@ -10,6 +10,9 @@ use Illuminate\Support\Facades;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
+
 
 use Illuminate\Http\RedirectResponse;
 
@@ -24,6 +27,9 @@ class ProductsController extends Controller
     public function index()
     {
         //
+        $products = Product::Pluck('pname', 'price', 'details', 'image'); 
+        return view('layouts.product.index',compact('products'));
+
     }
 
     /**
@@ -34,7 +40,7 @@ class ProductsController extends Controller
     public function create()
     {
         //
-        $categories = category::pluck('cname', 'cid');
+        $categories = Category::pluck('cname', 'cid');
        
 
         return view('layouts.product.create',compact('categories'));
@@ -51,7 +57,18 @@ class ProductsController extends Controller
     {
         
         //
-        $formInput=$request->all();
+        $formInput=$request->except('image');
+        //image upload
+        $image = $request->file('image');
+        $image = $request->image;
+        if($image)
+        {
+            //$imageName = $image->getClientOriginalName();
+            //$image->move('image', $imageName);
+            //$image->storeAs
+            $formInput['image'] = $image;
+        }
+
         product::create($formInput);
 
         return redirect()->route('addProduct');
