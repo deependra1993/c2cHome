@@ -57,16 +57,19 @@ class ProductsController extends Controller
     {
         
         //
-        $formInput=$request->except('image');
-        //image upload
+        $formInput=$request->except('image');        
         $image = $request->file('image');
-        $image = $request->image;
+        $rand = rand(2,100);       
+        $name =$image->getClientOriginalName();
+        $newName=$rand.$name;
+        $destinationPath = public_path('/image');
+        $image->move($destinationPath, $newName);   
+        
+
         if($image)
         {
-            //$imageName = $image->getClientOriginalName();
-            //$image->move('image', $imageName);
-            //$image->storeAs
-            $formInput['image'] = $image;
+            
+            $formInput['image'] = $newName;
         }
 
         product::create($formInput);

@@ -12,15 +12,17 @@ class indexController extends Controller
    	$arrPname = array();
 	$arrPprice= array();
 	$arrPdetail= array();
+   $arrPimage= array();
 		foreach ($prD as $prod) {
 			$arrPname[]= $prod->pname;
 		 	$arrPprice[]=$prod->price;
-		   	$arrPdetail=$prod->details;
+		   $arrPdetail[]=$prod->details;
+         $arrPimage[] = $prod->image;
 
 		}  
 		   
 
-   	return view('welcome',compact("arrPname","arrPprice","arrPdetail"));
+   	return view('welcome',compact("arrPname","arrPprice","arrPdetail","arrPimage"));
    }
    /*fetching product data from database */ 
    private function fetchProduct(){

@@ -1,10 +1,12 @@
 <div class="display-prod">
-@for($i = 0; $i< 6; $i++)
+@for($i = 0; $i< 4; $i++)
 	<div class="flip-container">
 		<div class="flip">
 			
 			<figure class="front">
-				<img src="image/dog.jpg" alt="img">
+			@for($j=$i;$j<=$i;$j++)
+				<img src="image/{{ $arrPimage[$j] }}" alt="img">
+			@endfor
 			</figure>
 		    <figure class="back">
 		    	@for($j=$i;$j<=$i;$j++)
