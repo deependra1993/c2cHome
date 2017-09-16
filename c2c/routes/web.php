@@ -22,5 +22,9 @@ Route::get('create','ProductsController@create')->name('addProduct');
 
 Route::resource('/product','ProductsController');
 Route::resource('/category','CategoriesController');
-Route::get('login/google', 'Auth\LoginController@redirectToProvider');
-Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
+
+
+Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
+
+

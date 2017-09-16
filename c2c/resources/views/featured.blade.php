@@ -1,5 +1,5 @@
 <div class="display-prod">
-@for($i = 0; $i< 6; $i++)
+@for($i = 0; $i< 4; $i++)
 	<div class="flip-container">
 		<div class="flip">
 			
@@ -11,7 +11,6 @@
 					<h4>{{$arrPname[$j]}}</h4>
 					<h4>{{$arrPprice[$j]}}</h4>
 					<h4>{{$arrPdetail[$j]}}</h4>
-
 				@endfor
 			    
 

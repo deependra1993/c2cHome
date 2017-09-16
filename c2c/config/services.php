@@ -36,9 +36,16 @@ return [
     ],
 
     'google' => [
-    'client_id' => 'your-github-app-id',
-    'client_secret' => 'your-github-app-secret',
-    'redirect' => 'http://your-callback-url',
-],
+        'client_id' => '360239962825-dhmvp86enp02ucskc6qhiep2r7cqfspp.apps.googleusercontent.com',
+        'client_secret' => 'LTiuBd3bFfc2mN1hI-ridxdp',
+        'redirect' => 'http://laravel.app/login/google/callback',
+    ],
+
+    'facebook' => [
+        'client_id' => '358298064603903
+',
+        'client_secret' => '8db85b781684ac09e703ab6e646b24df',
+        'redirect' => 'http://laravel.app/login/facebook/callback',
+    ],
 
 ];

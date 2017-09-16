@@ -15,7 +15,7 @@ class indexController extends Controller
 		foreach ($prD as $prod) {
 			$arrPname[]= $prod->pname;
 		 	$arrPprice[]=$prod->price;
-		   	$arrPdetail=$prod->details;
+		   	$arrPdetail[]=$prod->details;
 
 		}  
 		   
