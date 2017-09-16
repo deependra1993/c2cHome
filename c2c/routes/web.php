@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	$prD=DB::table('products')->get();
-   return view('welcome',compact('prD'));
-});
+Route::get('/', 'indexController@index')->name('index');
 
 Auth::routes();
 
