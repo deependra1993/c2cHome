@@ -2,7 +2,7 @@
 
 <h1>add all the products here</h1>
 		<div>
-		{!! Form::open(['url' => '/product']) !!}
+		{!! Form::open(['url' => '/product', 'files'=> true]) !!}
 			<div>
 				{!! Form::label('pname', 'Name', []) !!}
 				{!! Form::text('pname', null, []) !!}	
