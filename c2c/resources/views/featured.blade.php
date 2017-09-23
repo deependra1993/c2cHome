@@ -1,5 +1,5 @@
 <div class="display-prod">
-@for($i = 0; $i< 4; $i++)
+@for($i = 0; $i< 3; $i++)
 	<div class="flip-container">
 		<div class="flip">
 			

@@ -12,6 +12,7 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 
 use Illuminate\Http\RedirectResponse;
@@ -27,7 +28,8 @@ class ProductsController extends Controller
     public function index()
     {
         //
-        $products = Product::Pluck('pname', 'price', 'details', 'image'); 
+        $products = Product::all(); 
+
         return view('layouts.product.index',compact('products'));
 
     }
@@ -73,19 +75,24 @@ class ProductsController extends Controller
         }
 
         product::create($formInput);
+        session()->flash('message', 'Created Successfully');
 
-        return redirect()->route('addProduct');
+        return redirect()->route('productlist');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  \App\Product  $product
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responses
      */
-    public function show(Product $product)
+    public function show($id)
     {
         //
+        $product = Product::find($id);
+
+        
+        return view('layouts.product.show',compact('product'));
     }
 
     /**
@@ -94,9 +101,14 @@ class ProductsController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
         //
+        $product = Product::findorFail($id);
+        $categories = Category::pluck('cname', 'cid');
+
+        
+        return view('layouts.product.edit',compact('product','categories'));
     }
 
     /**
@@ -106,9 +118,30 @@ class ProductsController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
         //
+        $formInput=$request->except('image');        
+        $image = $request->file('image');
+        $rand = rand(2,100);       
+        $name =$image->getClientOriginalName();
+        $newName=$rand.$name;
+        $destinationPath = public_path('/image');
+        $image->move($destinationPath, $newName);   
+        
+
+        if($image)
+        {
+            
+            $formInput['image'] = $newName;
+        }
+        $product = Product::findorFail($id);
+        $product -> fill($formInput);
+        $product->save();
+
+        session()->flash('message', 'updated Successfully');
+
+        return redirect()->route('productlist');
     }
 
     /**
@@ -117,8 +150,14 @@ class ProductsController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
         //
+        $product = Product::findorFail($id);
+        $product->delete();
+        session()->flash('message', 'Deleted Successfully');
+
+        return redirect()->route('productlist');
     }
+
 }
