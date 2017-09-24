@@ -13,7 +13,7 @@
 		<p>{{ $product->pname }}</p>
 		<p>{{ $product->details }}</p>
 		<p>{{ $product->price }}</p>
-		<p><button><a href="{{ '/product/'.$product->pid.'/edit'  }}">Update</a></button></p>
+		<p><a href="{{ '/product/'.$product->pid.'/edit'  }}">Update</a></p>
 		{!! Form::open(['method' => 'delete','route' => ['product.destroy', $product->pid]]) !!}
 
 		<p><a>{!! Form::submit('Delete', []) !!}</a></p>

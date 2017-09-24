@@ -59,6 +59,15 @@ class ProductsController extends Controller
     {
         
         //
+        $this -> validate($request,[
+
+            'pname' => 'required|max:255',
+            'price' => 'required|numeric',
+            'details' => 'required|max:1048',
+            'image' => 'required|image',
+        ]);
+
+
         $formInput=$request->except('image');        
         $image = $request->file('image');
         $rand = rand(2,100);       
@@ -121,6 +130,17 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $this -> validate($request,[
+
+            'pname' => 'required|max:255',
+            'price' => 'required|numeric',
+            'details' => 'required|max:1048',
+            'image' => 'required|image',
+        ]);
+
+
+
+
         $formInput=$request->except('image');        
         $image = $request->file('image');
         $rand = rand(2,100);       
@@ -129,6 +149,7 @@ class ProductsController extends Controller
         $destinationPath = public_path('/image');
         $image->move($destinationPath, $newName);   
         
+
 
         if($image)
         {

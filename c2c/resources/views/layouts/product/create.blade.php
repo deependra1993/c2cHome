@@ -3,6 +3,18 @@
 @section('content')
 
 <h1>add all the products here</h1>
+
+
+		@if ($errors->any())
+		    <div class="alert alert-danger">
+		        <ul>
+		            @foreach ($errors->all() as $error)
+		                <li>{{ $error }}</li>
+		            @endforeach
+		        </ul>
+		    </div>
+		@endif
+		
 		<div style="padding-left: 12px;">
 		{!! Form::open(['url' => '/product', 'files'=> true]) !!}
 			<div>

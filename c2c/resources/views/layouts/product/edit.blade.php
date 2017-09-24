@@ -3,6 +3,16 @@
 @section('content')
 
 <h1>Edit your Product</h1>
+
+		@if ($errors->any())
+		    <div class="alert alert-danger">
+		        <ul>
+		            @foreach ($errors->all() as $error)
+		                <li>{{ $error }}</li>
+		            @endforeach
+		        </ul>
+		    </div>
+		@endif
 		<div style="padding-left: 12px;">
 		
 		{!! Form::model($product, ['method' => 'put','files'=> true,'route' => ['product.update', $product->pid]]) !!}
