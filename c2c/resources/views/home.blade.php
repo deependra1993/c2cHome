@@ -9,7 +9,7 @@
                 Dashboard
 
                 <a href="{{route('addProduct')}}" class="badge-pill right">
-                    adPost!!
+                    add Product
                 </a>
                 
             
@@ -25,7 +25,7 @@
                     You are logged in!
                 </div>
                 <div>
-                    <p><a href="{{ url('/product') }}">productlist</a></p>
+                    <p><a href="{{ route('productlist') }}">productlist</a></p>
 
                     
                 </div>

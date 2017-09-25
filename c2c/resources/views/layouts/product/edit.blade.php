@@ -2,8 +2,7 @@
 
 @section('content')
 
-<h1>add all the products here</h1>
-
+<h1>Edit your Product</h1>
 
 		@if ($errors->any())
 		    <div class="alert alert-danger">
@@ -14,28 +13,28 @@
 		        </ul>
 		    </div>
 		@endif
-		
 		<div style="padding-left: 12px;">
-		{!! Form::open(['url' => '/product', 'files'=> true]) !!}
+		
+		{!! Form::model($product, ['method' => 'put','files'=> true,'route' => ['product.update', $product->pid]]) !!}
 			<div>
 				{!! Form::label('pname', 'Name', []) !!}
-				{!! Form::text('pname', null, []) !!}	
+				{!! Form::text('pname') !!}	
 			</div>
 			<div>
 				{!! Form::label('details', 'Details', []) !!}
-				{!! Form::text('details', null, []) !!}
+				{!! Form::text('details') !!}
 			</div>
 			<div>
 				{!! Form::label('price', 'Price', []) !!}
-				{!! Form::text('price', null, []) !!}
+				{!! Form::text('price') !!}
 			</div>
 			<div>
 				{!! Form::label('image', 'Image', []) !!}
-				{!! Form::file('image', []) !!}
+				{!! Form::file('image',[]) !!}
 			</div>
 			<div>
 				{!! Form::label('cid', 'Category', []) !!}
-				{!! Form::select('cid', $categories, null, ['placeholder'=>'Select Categories']) !!}
+				{!! Form::select('cid',$categories, ['placeholder'=>'Select Categories']) !!}
 			</div>
 			<div>
 				
@@ -45,11 +44,10 @@
 				
 			</div>
 			<div>
-				{!! Form::submit('Create', []) !!}
+				{!! Form::submit('Update', []) !!}
 			</div>
 
 		{!! Form::close() !!}
 		</div>
-		
 
 @endsection
