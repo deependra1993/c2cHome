@@ -1,0 +1,117 @@
+                html, body {
+                background-color: yellow;
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 10vh;
+                margin-bottom: 5px;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+            .body-container{
+               
+            }
+
+            /* my body product slide bar*/
+            .bod-container{
+
+                position: relative;
+            
+                left: 0;
+                right: 0;
+                width: 100%;
+                margin-top: 0px;
+
+
+
+            }
+            .display-prod{
+                position: relative;
+                top:2px;
+                height: 300px;
+            }
+            .flip-container { 
+               height:300px;
+                width: 200px;
+              position: relative;
+              overflow: hidden;
+              perspective: 800px;
+              float: left;
+              margin-left: 10px;
+              margin-bottom: 5px;
+
+
+
+            }
+            .flip img{
+                width:205px;
+                height: 305px;
+            }
+            .flip {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              transform-style: preserve-3d;
+              transition: transform 1s;
+            }
+            .flip figure {
+              margin: 0;
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+            }
+
+            .flip .front {
+                height:30%;
+                width: 20%;
+             
+            }
+            .flip .back {
+                 transform: rotateY( 180deg );
+            }
+
+             .flip:hover {
+                  transform: rotateY( 180deg );
+            }
