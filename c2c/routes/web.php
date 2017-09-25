@@ -24,7 +24,8 @@ Route::resource('/product','ProductsController');
 Route::resource('/category','CategoriesController');
 
 
+
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
 
-
+Route::resource('/class','classcontroller');
