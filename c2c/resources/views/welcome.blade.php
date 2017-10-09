@@ -26,7 +26,7 @@
             @endif
        </div>
               <div class="bod-container">
-                <h1>hello human</h1>
+                
 
                     @include('featured')
 
