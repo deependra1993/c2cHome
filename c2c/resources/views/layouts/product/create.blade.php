@@ -41,6 +41,7 @@
 				
 				{!! Form::text('id', Auth::user()->id, ['hidden']) !!}
 			</div>
+			
 			<div>
 				
 			</div>

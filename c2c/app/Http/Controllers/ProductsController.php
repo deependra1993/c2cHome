@@ -68,7 +68,8 @@ class ProductsController extends Controller
         ]);
 
 
-        $formInput=$request->except('image');        
+        $formInput = $request->except('image');
+        $formInput['flag'] = 0;         
         $image = $request->file('image');
         $rand = rand(2,100);       
         $name =$image->getClientOriginalName();
@@ -164,6 +165,22 @@ class ProductsController extends Controller
 
         return redirect()->route('productlist');
     }
+
+    public function flagUpdate($id)
+    {
+        $product = Product::findorFail($id);
+        $flag = $product->flag;
+        $flag = $flag + 1 ;
+        $product->flag = $flag;
+        $product->save();
+        
+        session()->flash('message', 'Content reported');
+        return redirect()->route('productlist');
+    }
+    
+
+
+
 
     /**
      * Remove the specified resource from storage.

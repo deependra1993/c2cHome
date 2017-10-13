@@ -19,6 +19,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('add','HomeController@add')->name('add');
 Route::get('create','ProductsController@create')->name('addProduct');
 Route::get('index','ProductsController@index')->name('productlist');
+Route::get('product/flagUpdate/{id}','ProductsController@flagUpdate' );
 
 
 Route::resource('/product','ProductsController');

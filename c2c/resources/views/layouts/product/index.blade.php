@@ -18,7 +18,8 @@
 
 		<p><a>{!! Form::submit('Delete', []) !!}</a></p>
 
-		{!! Form::close() !!}		
+		{!! Form::close() !!}
+		<p><button><a href="{{ '/product/flagUpdate/'.$product->pid }}">Report</a></button></p>		
 		@endforeach
 		
 	</div>
