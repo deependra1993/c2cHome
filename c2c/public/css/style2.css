@@ -1,5 +1,6 @@
-            html, body {
-                
+             html, body {
+                background-color:;
+
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -49,14 +50,14 @@
                 margin-bottom: 30px;
             }
             .body-container{
-               
+
             }
 
             /* my body product slide bar*/
             .bod-container{
 
                 position: relative;
-            
+
                 left: 0;
                 right: 0;
                 width: 100%;
@@ -71,7 +72,7 @@
                 height: 300px;
 
             }
-            .flip-container { 
+            .flip-container {
                height:300px;
                 width: 200px;
               position: relative;
@@ -112,7 +113,7 @@
             .flip .front {
                 height:30%;
                 width: 20%;
-             
+
             }
             .flip .back {
                  transform: rotateY( 180deg );
@@ -121,5 +122,3 @@
              .flip:hover {
                 transform: rotateY( 180deg );
             }
-
-                                 

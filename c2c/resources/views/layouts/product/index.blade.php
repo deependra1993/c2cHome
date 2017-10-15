@@ -38,6 +38,7 @@
 
 								<a>{!! Form::submit('Delete', ['class' => 'ad-del shadow']) !!}</a>
 
+
 								{!! Form::close() !!}
 							</div>		
 						@endforeach
@@ -45,5 +46,10 @@
 	            </div>
 	        </div>
 	    </div>
+
+		{!! Form::close() !!}
+		<p><button><a href="{{ '/product/flagUpdate/'.$product->pid }}">Report</a></button></p>		
+		@endforeach
+
 	</div>
 @endsection

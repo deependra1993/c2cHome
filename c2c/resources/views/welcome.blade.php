@@ -20,7 +20,7 @@
             @endif
        </div>
               <div class="bod-container">
-               
+
 
                     @include('featured')
 
