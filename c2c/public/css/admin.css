@@ -1,0 +1,120 @@
+*{
+	margin:0 0 0 0;
+	padding: 0 0 0 0;
+
+}
+nav{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height:100px;
+	overflow: hidden;
+	
+}
+.nav-container{
+	float: right;
+	width:100%;
+	height: 100%;
+	
+	display: inline;
+	padding: 6px;
+	padding-bottom: 5px;
+	overflow: hidden;
+}
+#admin-logo{
+	float: left;
+
+	margin-left:10px;
+	width: 100px;
+	height: 90px;
+	padding-top: 25px;
+	
+	color:pink;
+	font-size: 25px;
+	padding-left: 15px;
+	overflow: hidden;
+}
+.menu{
+	float: right;
+	
+	width: 80%;
+	text-decoration: none;
+	height: 100%;
+}
+.menu li{
+	list-style: none;
+	display: inline-block;
+	margin-left:10px;
+	width: 100px;
+	height: 90px;
+	float: right;
+	border:1px solid pink;
+	color:pink;
+	
+	padding-left: 15px;
+	overflow: hidden;
+	
+	
+}
+
+#logout{
+	padding-top: 35px;
+	left:5px;
+}
+.menu li:hover{
+	cursor: pointer;
+	background-color: pink;
+	color: #ffffff;
+	transform: all 1s ease;
+}
+.no{
+	font-weight: 20px;
+	font-size: 40px;
+	float: right;
+	margin-right: 10px;
+
+}
+
+/**----------this is the style for user page */
+.user-container{
+	position: absolute;
+	border: 1px solid pink;
+	width:90%;
+	min-height: 200px;
+	top:150px;
+	left: 5%;
+
+}
+.user{
+	
+
+}
+.user li{
+	list-style: none;
+	display: flex;
+	background-color: pink;
+	color: #ffffff;
+	margin:5px 5px 5px 5px;
+	padding: 5px 5px 5px 5px;
+}
+.user li span {
+	
+	margin-left: 5px;
+	width:25%;
+	padding-left: 5px;
+	overflow: hidden;
+	text-align: center;
+
+}
+.delete{
+	border: 1px solid white;
+}
+
+.user li span:hover{
+	cursor: pointer;
+	
+	background-color: #ffffff;
+	color: pink;
+}

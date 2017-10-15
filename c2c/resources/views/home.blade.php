@@ -5,14 +5,10 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                Dashboard
-
-                <a href="{{route('addProduct')}}" class="badge-pill right">
-                    add Product
-                </a>
-                
-            
+                <div class="panel-heading ">
+                    <span class="user-name" >
+                         Welcome {{Auth::user()->name}}
+                    </span>
                 </div>
 
                 <div class="panel-body">
@@ -21,13 +17,21 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                     <div>
+                    <a href="{{ route('productlist') }}" class="prodLink">
+                        <div class="prodList first"> 
+                            PRODUCT-LIST
+                        </div>
 
-                    You are logged in!
-                </div>
-                <div>
-                    <p><a href="{{ route('productlist') }}">productlist</a></p>
+                    </a>
+                    <a href="{{route('addProduct')}}" class="badge-pill right prodLink" >
+                        <div class="prodList"> 
+                            Add-Post!
+                        </div>
+                    </a>
 
                     
+                </div>
                 </div>
             </div>
         </div>

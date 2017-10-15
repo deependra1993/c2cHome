@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <title>c2c</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -29,7 +30,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        c2c
                     </a>
                 </div>
 
@@ -43,9 +44,27 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
+                            <li class="go-home red shadow">
+                                <a href="{{route('allItems')}}">
+                                    market
+                                </a>
+
+                            </li>
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+                            <li class="go-home shadow">
+                                <a href="{{route('home')}}">
+                                    home
+                                </a>
+
+                            </li>
+                             <li class="go-home red shadow">
+                                <a href="{{route('allItems')}}">
+                                    market
+                                </a>
+
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name}} <span class="caret"></span>

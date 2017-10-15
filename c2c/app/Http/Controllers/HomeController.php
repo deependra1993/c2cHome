@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Mail;
+use App\Mail\message;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -28,4 +31,5 @@ class HomeController extends Controller
     public function add(){
         return view('layouts.add');
     }
+
 }

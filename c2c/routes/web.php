@@ -29,4 +29,10 @@ Route::resource('/category','CategoriesController');
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Route::resource('/class','classcontroller');
+
+
+//this is pointing to the admin controller
+Route::get('admin/','AdminController@index')->name('admin');
+Route::get('admin/product','AdminController@PostedProduct')->name('product');
+Route::get('allItems/','allItemController@index')->name('allItems');
+Route::get('allItems/{id}', 'allItemController@message')->name('message');

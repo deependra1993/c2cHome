@@ -1,0 +1,215 @@
+/*product list*/
+.prodList{
+	text-decoration: none;
+	color: #ffffff;
+	background-color:#42A5F5;
+	text-align: center;
+	height: 50px;
+	width: 50%;
+	padding-top: 15px;
+	float: left;
+}
+.first{
+	background:#FF1744;
+}
+.prodList:hover{
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: 3px 3px 2px #757575;
+	opacity: 0.8;
+	transition: all 0.4s ease;
+}
+.prodLink{
+	text-decoration: none;
+	width: 50%;
+}
+.prodLink:hover{
+	text-decoration: none;
+
+}
+.user-name{
+	background-color: #42A5F5;
+	height:100px;
+	width: 100px;
+	font-size: 20px;
+	padding: 10px 10px 10px 10px;
+	border:1px solid none;
+	border-radius: 20px;
+	color:#ffffff;
+
+}
+.user-name:hover{
+	background-color: #FF1744;
+	transition: all 0.4s ease;
+	}
+.product-update{
+	width:160%;
+	margin-left:-30%;
+}
+.addList{
+
+	height: 120%;
+	width:100%;
+	background-color: #42A5F5;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+
+	
+
+}
+/*product update*/
+.prod-bod{
+	
+	width: 150px;
+	height: 250px;
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;	
+}
+.prod-bod span{
+	width: 100%;
+
+	float: left;
+	text-align: center;
+	margin-bottom: 2px;
+}
+.prod-up-bod{
+	background-color: #42A5F5;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	margin-bottom: 4px;
+
+}
+.ad-del{
+	border:none;
+	background-color: #FF1744;
+	color: #ffffff;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	
+}
+
+.prod-up{
+	
+}
+
+
+.text{
+	color:#ffffff;
+}
+.text:hover{
+	cursor: pointer;
+	color:#ffffff;
+	text-decoration: none;
+}
+.shadow:hover{
+		cursor: pointer;
+		box-shadow: 3px 3px 2px #757575;
+		opacity: 0.8;
+
+}
+/*add form*/
+.form-ad{
+	padding: 5% 5% 5% 5%;
+	color: #42A5F5;
+}
+.form-ad label{
+	float: left;
+	width: 100%;
+	text-indent: 4;
+	text-transform: uppercase;
+
+}
+.txt{
+	width: 40%;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #42A5F5;
+
+}
+.txt:focus{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	outline: none;
+	width: 100%;
+	border-bottom: 1px solid #FF1744;
+	transition: all 0.3s linear;
+
+
+}
+.form-ad button{
+	background-color:#FF1744;
+}
+.cat {
+	background-color:  #42A5F5;
+	border:none;
+	outline: none;
+	color:#ffffff;
+	opacity:1.9;
+	height: 20px;
+
+}
+.cat:active{
+	transition:all 0.5s ease;
+}
+.cat:focus{
+	transition:all 0.5s ease;
+}
+.create{
+	background-color: #FF1744;
+	border:none;
+	outline:none;
+	text-transform: uppercase;
+	text-align: center;
+	color : #ffffff;
+	margin-top:5px;
+	width:100%;
+	height:50px;
+	padding: 3px 3px 3px 3px;
+	position: relative;
+	bottom: 0;
+
+}
+.head{
+	background-color:  #42A5F5;
+	width: 100%
+	height:100%;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	color:#ffffff;
+	text-transform: uppercase;
+
+}
+.alert{
+	list-style: none;
+	position: relative;
+	top:0;
+	opacity: 0.7;
+	background-color: transparent;
+	border:none;
+}
+.alert li{
+	
+	list-style: none;
+	text-align: center;
+
+}
+
+.go-home{
+	background-color:  #42A5F5;
+	text-indent: 5;
+	text-transform: uppercase;
+	text-align: center;
+	padding:2px;
+	color: #ffffff;
+}
+.go-home a{
+	color:#ffffff;
+}
+.red{
+	background-color: #FF1744;
+}
