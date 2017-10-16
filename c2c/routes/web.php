@@ -28,7 +28,7 @@ Route::resource('/adminRegister','AdminRegisterController');
 
 
 
-Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{service}', 'Auth\LoginController@redirectToProvider')->name('google');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
 
 
@@ -36,6 +36,7 @@ Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallb
 //this is pointing to the admin controller
 Route::get('admin/','AdminController@index')->name('admin');
 Route::get('admin/product','AdminController@PostedProduct')->name('product');
+Route::get('admin/flags','AdminController@flags')->name('flags');
 Route::get('allItems/','allItemController@index')->name('allItems');
 Route::get('allItems/{id}', 'allItemController@message')->name('message');
 Route::get('admin/delete/{id}', 'AdminController@destroy');

@@ -67,15 +67,20 @@
 	margin-bottom: 10px;	
 }
 .prod-bod span{
-	width: 100%;
+	width: 150px;
 
 	float: left;
 	text-align: center;
 	margin-bottom: 2px;
 }
+.prod-bod-container{
+	width:150px;
+
+}
 .prod-up-bod{
 	background-color: #42A5F5;
 	width: 100%;
+	outline: 2px solid yellow;
 	height: 10%;
 	text-align: center;
 	margin-bottom: 4px;
@@ -213,3 +218,4 @@
 .red{
 	background-color: #FF1744;
 }
+

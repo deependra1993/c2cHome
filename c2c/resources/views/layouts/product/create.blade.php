@@ -53,9 +53,6 @@
 								{!! Form::text('id', Auth::user()->id, ['hidden']) !!}
 							</div>
 							<div>
-								
-							</div>
-							<div>
 								{!! Form::submit('Create', ['class' => 'create shadow']) !!}
 							</div>
 

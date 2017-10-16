@@ -22,34 +22,45 @@
 	   								<div class="prod-up-bod shadow"> 
 	   									Update
 	   								</div>
-	   								
 	   							</a>
-								<span>
-									{{ $product->pname }}
-								</span>
-								<span>
-									{{ $product->details }}
-								</span>
-								<span>
-									${{ $product->price }}
-								</span>
+	   							<div class="prod-bod-container">
+										<span>
+											{{ $product->pname }}
+										</span>
+										<span>
+											{{ $product->details }}
+										</span>
+										<span>
+											${{ $product->price }}
+										</span>
+								</div>
 								
 								{!! Form::open(['method' => 'delete','route' => ['product.destroy', $product->pid]]) !!}
+								<a href="{{ '/product/flagUpdate/'.$product->pid }}">
+									<div class="report">
+										Report
+									</div>
+								</a>
 
 								<a>{!! Form::submit('Delete', ['class' => 'ad-del shadow']) !!}</a>
 
 
 								{!! Form::close() !!}
+
 							</div>		
 						
+						</div>	
+
+						@endforeach
+
 					</div>
 	            </div>
 	        </div>
 	    </div>
 
 		{!! Form::close() !!}
-		<p><button><a href="{{ '/product/flagUpdate/'.$product->pid }}">Report</a></button></p>		
-		@endforeach
+				
+		
 
 	</div>
 @endsection
