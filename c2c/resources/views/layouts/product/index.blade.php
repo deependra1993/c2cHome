@@ -41,7 +41,7 @@
 
 								{!! Form::close() !!}
 							</div>		
-						@endforeach
+						
 					</div>
 	            </div>
 	        </div>

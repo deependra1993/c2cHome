@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Product;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -73,6 +74,22 @@ class AdminController extends Controller
  		  
     	return $productList;
 
+    }
+
+      /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+        $product = Product::findorFail($id);
+        $product->delete();
+        session()->flash('message', 'Deleted Successfully');
+
+        return redirect()->route('product');
     }
 
 }

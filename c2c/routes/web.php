@@ -24,6 +24,7 @@ Route::get('product/flagUpdate/{id}','ProductsController@flagUpdate' );
 
 Route::resource('/product','ProductsController');
 Route::resource('/category','CategoriesController');
+Route::resource('/adminRegister','AdminRegisterController');
 
 
 
@@ -37,3 +38,4 @@ Route::get('admin/','AdminController@index')->name('admin');
 Route::get('admin/product','AdminController@PostedProduct')->name('product');
 Route::get('allItems/','allItemController@index')->name('allItems');
 Route::get('allItems/{id}', 'allItemController@message')->name('message');
+Route::get('admin/delete/{id}', 'AdminController@destroy');
