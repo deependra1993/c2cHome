@@ -1,5 +1,8 @@
 <?php
-
+//ADMIN PANNEL IS THE CRUCIAL PART OF THE WEBSITE
+//THIS IS WHERE THE OWNER OF THE WEBSITE CAN MAKE CRUSIAL ACTIONS
+//ADMIN COUNTROLER PROVIDES THE USER WITH THE FUNCTIONS TO ACTIEVE THOSE DESIRED ACTIONS 
+//
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -33,6 +36,17 @@ class AdminController extends Controller
     	$productDetail=$this->ProductList();
     	return view("admin.product",compact("userTotal","productTotal","productDetail"));
     }
+
+
+    //this function filters all the flagged ad posts or items 
+    public function flags(){
+        $navCounts = $this->allList();
+        $productTotal = $navCounts[1];
+        $userTotal = $navCounts[0];
+        $flagDetail=$this->flagedList();
+        
+        return view("admin.flags",compact("userTotal","productTotal","flagDetail"));
+   }
 
 
 
@@ -73,6 +87,11 @@ class AdminController extends Controller
  		  
     	return $productList;
 
+    }
+    //this is the functionn that fetches flagged items from database
+        public function flagedList(){
+        $flagList = DB::table('products')->where('flag', '1');
+            return $flagList;
     }
 
 }
