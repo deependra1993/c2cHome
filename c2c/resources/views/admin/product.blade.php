@@ -43,7 +43,7 @@
 					{{$product->created_at}}
 			</span>
 			<span class="delete">
-				<a href= "{{ '/admin/delete/'.$product->pid }}"> delete </a>
+				<a> delete </a>
 			</span>
 			
 		</li>

@@ -173,7 +173,7 @@ class ProductsController extends Controller
         return redirect()->route('productlist');
     }
 
-    
+    //handles if any product is reported
     public function flagUpdate($id)
     {
         $product = Product::findorFail($id);
@@ -191,7 +191,7 @@ class ProductsController extends Controller
 
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified product from database.
      *
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response

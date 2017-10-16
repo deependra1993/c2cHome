@@ -26,7 +26,7 @@
                     </a>
                     <a href="{{route('addProduct')}}" class="badge-pill right prodLink" >
                         <div class="prodList"> 
-                            Add-Post!
+                            Add Product!
                         </div>
                     </a>
 

@@ -28,33 +28,25 @@ Class SearchController extends Controller
 					$arrPprice= array();
 					$arrPdetail= array();
    					$arrPimage= array();
-					foreach ($products as $prod) {
+					foreach ($products as $prod) 
+					{
 					/*	$line = "Your Product ";
 					echo '<style = "font-color: #ff0000"> $line </style>';*/
-					$arrPname[]= $prod->pname;
-					echo "<h4>Product info</h4>".$prod->pname."<br>";
-					
-		 			$arrPprice[]=$prod->price;
-		 			echo $prod->price."<br>";
-		 			
-		   			$arrPdetail[]=$prod->details;
-		   			echo $prod->details."<br>";
-		   		
-		   	        $arrPimage[] = $prod->image;
+						$arrPname[]= $prod->pname;
+						echo "<h4>Product info</h4>".$prod->pname."<br>";
+						
+			 			$arrPprice[]=$prod->price;
+			 			echo $prod->price."<br>";
+			 			
+			   			$arrPdetail[]=$prod->details;
+			   			echo $prod->details."<br>";
+			   		
+			   	        $arrPimage[] = $prod->image;
 
-                    echo '<img src="\ . $prod->image. ">'."<br>";
-                    //echo '<img src="{"image/{{ $arrPimage[] }">';*/
-                   
-                   return view ('Search.search',compact("arrPname","arrPprice","arrPdetail","arrPimage"));          		
-
-}
-
-/*
-                  if(count($products) > 0)*/
-                  	
-                  
-                  /*else return view ('home')->withMessage('No Details found. Try to search again !');*/
-
-		}
-
+	                    echo '<img src="\ . $prod->image. ">'."<br>";
+	                    //echo '<img src="{"image/{{ $arrPimage[] }">';*/
+	                   
+	                   return view ('Search.search',compact("arrPname","arrPprice","arrPdetail","arrPimage"));
+					}
 	}
+}

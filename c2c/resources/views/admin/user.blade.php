@@ -27,7 +27,7 @@
 					{{$newUser->created_at}}
 			</span>
 			<span class="delete">
-				delete
+				<a href= "{{ '/admin/delete/'.$newUser->id }}"> delete </a>
 			</span>
 			
 		</li>

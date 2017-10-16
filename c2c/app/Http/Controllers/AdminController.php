@@ -5,6 +5,8 @@
 //
 namespace App\Http\Controllers;
 use App\Product;
+use App\User;
+
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -50,12 +52,6 @@ class AdminController extends Controller
    }
 
 
-
-
-
-
-
-
     //for the nav count list 
     public function allList(){
     	$userTotal=$this->count("users");
@@ -64,9 +60,6 @@ class AdminController extends Controller
     	return $countList;
 
     }
-
-
-
 
 //function library
     public function user(){
@@ -96,7 +89,7 @@ class AdminController extends Controller
     }
 
       /**
-     * Remove the specified resource from storage.
+     * Remove the specified User from database.
      *
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
@@ -104,11 +97,11 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-        $product = Product::findorFail($id);
+        $product = User::findorFail($id);
         $product->delete();
         session()->flash('message', 'Deleted Successfully');
 
-        return redirect()->route('product');
+        return redirect()->route('admin');
     }
 
 }

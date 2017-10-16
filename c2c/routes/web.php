@@ -40,3 +40,4 @@ Route::get('admin/flags','AdminController@flags')->name('flags');
 Route::get('allItems/','allItemController@index')->name('allItems');
 Route::get('allItems/{id}', 'allItemController@message')->name('message');
 Route::get('admin/delete/{id}', 'AdminController@destroy');
+Route::get('/search', 'SearchController@search');

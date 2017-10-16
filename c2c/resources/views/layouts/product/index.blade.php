@@ -11,7 +11,7 @@
 						@endif
 						<a href="{{route('addProduct')}}" class="addLink text">
 							<div class="addList shadow">
-								Ad-Post!
+								Add Product!
 							</div>
 						</a>
 					</div>
